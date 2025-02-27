@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: bvmodelgen
+Version: 0.0.0
+Summary: Python scripts to generate biventricle models from MRI images
+Author-email: Javiera Jilberto <jilberto@umich.edu>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: nibabel
+Requires-Dist: meshio
+Requires-Dist: pyvista
+
+# universal-aorta-coords
+
+These scripts uses FEniCSx to solve Laplace problems to find the coordinates.
+To install the codes and FEniCSx do, 
+1. Create a conda environment: `conda create --name uac-env`
+2. Activate the environment: `conda activate uac-env`
+3. Install FEniCSx: `conda install -c conda-forge fenics-dolfinx mpich h5py cffi python`
+4. Install bvmodelgen2, do `python -m pip install -e .` inside the repository folder (make sure the environment is activated).
