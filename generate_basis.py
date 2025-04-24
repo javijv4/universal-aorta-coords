@@ -14,15 +14,15 @@ import dolfinxio as dxio
 import utils as ut
 
 # Read-in mesh and boundary file
-mesh = chio.read_mesh('mesh/model', meshio=True)
-bdata = chio.read_bfile('mesh/model', element='tetra')
+mesh = chio.read_mesh('work/solidonly', meshio=True)
+bdata = chio.read_bfile('work/solidonly', element='tetra')
 endo_patch = 3
 
 # Boundary conditions
-long_bcs_marker = {'face': {1: 0.0, 12: 0.0,
-                            5: 1.0, 8: 1.0}}
-trans_bcs_marker = {'face': {3: 0.0,
-                        14: 1.0,}}
+long_bcs_marker = {'face': {15: 0.0,
+                            2: 1.0}}
+trans_bcs_marker = {'face': {19: 0.0,
+                        7: 1.0,}}
 
 # Initialize Laplace problem
 dxmesh, mt = dxio.read_meshio_mesh(mesh, bdata)
